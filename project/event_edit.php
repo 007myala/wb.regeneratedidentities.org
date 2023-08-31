@@ -161,7 +161,7 @@ require 'utilities/commands/event_update.php';
                       <form action="utilities/commands/event-doctype_update.php" method="POST">
                         <input name="eventID" value=<?php echo $_GET['eventID']; ?> type=hidden>
                         <input name="action" value="doc" type=hidden>
-                        <input name="page_m" value="<?php echo $_GET['page_m'];?>" type=hidden>
+                        <input name="page_m" value="<?php echo isset($_GET['page_m']) ? $_GET['page_m'] : 1;?>" type=hidden>
 
                         <select class="form-control" name="doctype">
                           <?php

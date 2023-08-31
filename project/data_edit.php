@@ -468,7 +468,7 @@ plugins: [
 ],
 toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image ",
 content_css: '//www.tiny.cloud/css/codepen.min.css',
-images_upload_base_path: 'http://bm.regeneratedidentities.org/project',
+images_upload_base_path: 'http://wb.regeneratedidentities.org/project',
 images_upload_url: 'plugins/postAcceptor.php',
 automatic_uploads: true,
 toolbar_mode: 'floating',

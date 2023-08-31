@@ -1,7 +1,7 @@
 <?php
 
 //Loading values
-if($_POST['action']=="Update"){
+if(isset($_POST['action']) && $_POST['action']=="Update"){
 $type="event";
 $field="";
 foreach ($_POST as $name => $val)
