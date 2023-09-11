@@ -134,7 +134,7 @@
 
   while ($projectselect= $query_projectselect->fetch(PDO::FETCH_ASSOC)){  
 
-    if(isset($results[$projectselect['ProjectID']]) && $results[$projectselect['ProjectID']]==1){
+    if(isset($results[$projectselect['ProjectID']]) && $results[$projectselect['ProjectID']]==1 && $features['Person']>0){
     ?>
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
@@ -156,7 +156,7 @@
   <?php } ?>
 
   <!-- Nav Item - Dashboard -->
-  <?php if($results['security']>=0){?>
+  <?php if($results['security']>=0 && $features['Person']>0){?>
   <li class="nav-item active">
     <a class="nav-link" href="new_entry.php">
       <i class="fas fa-folder-plus"></i>
@@ -164,7 +164,7 @@
   </li>
   <?php } ?>
 
-  <?php if($results['security']>=0){?>
+  <?php if($results['security']>=0 && $features['Full-source']>0){?>
   <li class="nav-item active">
     <a class="nav-link" href="new_full_source.php">
       <i class="fas fa-folder-plus"></i>

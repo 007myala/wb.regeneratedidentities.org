@@ -245,7 +245,7 @@ require 'utilities/commands/object_update.php';
                                     'width=500,height=500');
                               return false;" target="_blank"><i class="far fa-file"></i></i>  View File</a>
                             <?php } else{ ?>
-                              <a download="<?php echo $newfilename; ?>" class="btn btn-warning col-xl-12 col-md-1 mb-1" href="<?php echo explode("?", $current_URL)[0].$object_data['File'];?>" ><i class="far fa-file"></i></i> Downlaod File</a>
+                              <a download="<?php echo $newfilename; ?>" class="btn btn-warning col-xl-12 col-md-1 mb-1" href="<?php echo explode("?", $current_URL)[0].$object_data['File'];?>" ><i class="far fa-file"></i></i> Download File</a>
 
                             <?php }?>
                         </h4>
