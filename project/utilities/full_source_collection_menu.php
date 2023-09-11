@@ -11,7 +11,7 @@
         $query_projects = $conn->query($q_projects);
         while($project = $query_projects->fetch(PDO::FETCH_ASSOC)){
 
-          if($results[$project['ProjectID']]==1)
+          if(isset($results[$project['ProjectID']]) && $results[$project['ProjectID']]==1)
           {
             $authorized_projects=$authorized_projects." `project` LIKE '".$project['ProjectID']."' OR";
             $authorized_projects_names=$authorized_projects_names.$project['ProjectName']."<br>";

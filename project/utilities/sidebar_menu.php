@@ -140,7 +140,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="person.php?projectID=<?php echo $projectselect['ProjectID'];?>">
           <i class="fas fa-database"></i>
-          <span>All Legislation</span></a>
+          <span>All People</span></a>
       </li>
     <?php } 
   }
@@ -160,20 +160,26 @@
   <li class="nav-item active">
     <a class="nav-link" href="new_entry.php">
       <i class="fas fa-folder-plus"></i>
-      <span>New Legislation</span></a>
+      <span>New Person</span></a>
+  </li>
+  <?php } ?>
+
+  <?php if($results['security']>=0){?>
+  <li class="nav-item active">
+    <a class="nav-link" href="new_full_source.php">
+      <i class="fas fa-folder-plus"></i>
+      <span>New Full Source</span></a>
   </li>
   <?php } ?>
 
   <!-- Nav Item - Pages Collapse Menu -->
   <?php if($features['Full-source']>0){?>
-    <!--
     <li class="nav-item active">
       <a class="nav-link" href="Full_source_list.php">
         <i class="fas fa-file"> </i>
         <span> Full Sources (Collections)</span></a>
 
     </li>
-    -->
   <?php } ?>
 
   <li class="nav-item">

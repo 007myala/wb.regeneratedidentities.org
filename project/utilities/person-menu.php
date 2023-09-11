@@ -1,7 +1,7 @@
 <div class="card bg-secondary text-white shadow">
   <div class="card-body">
       <div class="text-white-50 small" >
-        <h5 style="color: white;">Legislation Folder: </h5><h6 style="color: white;"><?php echo $person_data['UI'];?> (<?php echo $person_data['Name'];?>)</h6><br>
+        <h5 style="color: white;">Person Folder: </h5><h6 style="color: white;"><?php echo $person_data['UI'];?> (<?php echo $person_data['Name'];?>)</h6><br>
         <?php if($person_data['online']>0){ ?>
           <p style="color: #C9E79B; font-size:16px;"><i class="fas fa-signal"></i> Online</p>
         <?php } else { ?>
@@ -22,7 +22,7 @@
       <a style="width: 160px !important;"  class="btn btn-sm btn-secondary shadow-sm" href="mytask.php"><i class="fas fa-arrow-left"></i> My Tasks</a><br><br>
 
       <?php if($features['Person']>0){ ?>
-      <a style="width: 160px !important;"  class="btn btn-sm btn-info shadow-sm" href="person_edit.php?personID=<?php echo $_GET['personID'];?>&page_m=<?php echo $page_m;?>&pCnt=<?php echo $pCnt;?>&pID=<?php echo $pID;?>"><i class="fas fa-user"></i> Legislation Data</a><br><br>
+      <a style="width: 160px !important;"  class="btn btn-sm btn-info shadow-sm" href="person_edit.php?personID=<?php echo $_GET['personID'];?>&page_m=<?php echo $page_m;?>&pCnt=<?php echo $pCnt;?>&pID=<?php echo $pID;?>"><i class="fas fa-user"></i> Person Data</a><br><br>
 
       <?php } if($features['Events']>0){ ?>
       <a style="width: 160px !important;"  class="btn btn-sm btn-warning shadow-sm" href="events_person.php?personID=<?php echo $_GET['personID'];?>&page_m=<?php echo $page_m;?>&pCnt=<?php echo $pCnt;?>&pID=<?php echo $pID;?>"> <i class="fa fa-calendar"></i> Events</a><br><br>
@@ -33,7 +33,7 @@
 
       <a style="width: 160px !important;"  class="btn btn-sm btn-secondary shadow-sm" href="forward.php?personID=<?php echo $_GET['personID'];?>&page_m=<?php echo $page_m;?>&pCnt=<?php echo $pCnt;?>&pID=<?php echo $pID;?>"></i> <i class="fas fa-share"></i> Forward Task</a><br><br>
 
-      <a style="width: 160px !important;"  class="btn btn-sm btn-secondary shadow-sm" href="log_person.php?personID=<?php echo $_GET['personID'];?>&page_m=<?php echo $page_m;?>&pCnt=<?php echo $pCnt;?>&pID=<?php echo $pID;?>"></i> <i class="fas fa-file"></i> Legislation Log</a><br><br>
+      <a style="width: 160px !important;"  class="btn btn-sm btn-secondary shadow-sm" href="log_person.php?personID=<?php echo $_GET['personID'];?>&page_m=<?php echo $page_m;?>&pCnt=<?php echo $pCnt;?>&pID=<?php echo $pID;?>"></i> <i class="fas fa-file"></i> Person Log</a><br><br>
 
       <?php if($results['security']>0 ){
         if($person_data['online']>0){?>

@@ -7,7 +7,12 @@ require 'utilities/database_SS.php';
 $date = new DateTime();
 $TimeDate = $date->format('Y-m-d H:i:s');
 $date_only = $date->format('Y-m-d');
-$personID = $_GET['personID'];
+if(isset($_GET['personID'])){
+  $personID = $_GET['personID'];
+} else {
+  $personID = '';
+}
+
 $objectID = $_GET['objectID'];
 $RA = $results['fname']." ".$results['lname'];
 $field="";
@@ -213,7 +218,7 @@ require 'utilities/commands/object_update.php';
                       <div class="col-xl-10 col-md-1 mb-1">
                           <form action="utilities/commands_external/upload_object.php" method="POST" class="form-group" enctype="multipart/form-data">
                             <input type="hidden" name="objectID" value="<?php echo $objectID;?>">
-                            <input type="hidden" name="personUI" value="<?php echo $person_data['UI'];?>">
+                            <input type="hidden" name="personUI" value="<?php echo isset($person_data['UI']) ? $person_data['UI'] : '';?>">
                          <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
                       </div>
                       <div class="col-xl-2 col-md-2 mb-2">
@@ -231,7 +236,9 @@ require 'utilities/commands/object_update.php';
                     <div class="row">
                       <div class="col-xl-12 col-md-1 mb-1">
                         <h4>
-                          <?php $newfilename=$person_data['UI']."_".$object_data['Field1'].".".$object_data['Format'];
+                          <?php 
+                            $pdata_UI = isset($person_data['UI']) ? $person_data['UI'] : '';
+                          $newfilename= $pdata_UI."_".$object_data['Field1'].".".$object_data['Format'];
                           if($object_data['Format']=="PDF" or $object_data['Format']=="pdf"){ ?>
                           <a download="<?php echo $newfilename; ?>" class="btn btn-warning col-xl-12 col-md-1 mb-1" href="<?php echo explode("?", $current_URL)[0].$object_data['File'];?>" onclick="window.open('<?php echo explode("?", $current_URL)[0].$object_data['File'];?>',
                                           'newwindow',

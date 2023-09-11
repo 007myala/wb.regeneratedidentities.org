@@ -117,6 +117,9 @@ require 'utilities/database_SS.php';
 
                     <tbody >
                 <?php
+                if(!isset($search)){
+                  $search = '';
+                }
                 $q1="SELECT * FROM `object` WHERE  `collectionName` LIKE '".$collectionName."' ".$search;
 
                 $query = $conn->query($q1);
@@ -238,7 +241,7 @@ require 'utilities/database_SS.php';
         </div>
         <div class="modal-body">
           The following fields are now updated and log is updated.<br>
-          <?php echo $field;?>
+          <?php echo isset($field) ? $field : '';?>
 
          </div>
         <div class="modal-footer">
@@ -309,7 +312,7 @@ require 'utilities/database_SS.php';
   <!--Success Message Display-->
   <?php
   # Success Message box
-  if ($message == 1) :
+  if (isset($message) && $message == 1) :
     ?>
 
     <script>
@@ -322,7 +325,7 @@ require 'utilities/database_SS.php';
   <!--Error Message Display-->
   <?php
   # Error Message box
-  if ($message == 2) :
+  if (isset($message) && $message == 2) :
     ?>
 
     <script>
@@ -335,7 +338,7 @@ require 'utilities/database_SS.php';
   <!--Error1 Message Display-->
   <?php
   # Error Message box
-  if ($message == 3) :
+  if (isset($message) && $message == 3) :
     ?>
 
     <script>

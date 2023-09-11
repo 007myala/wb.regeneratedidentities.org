@@ -156,7 +156,7 @@ require 'utilities/commands/person_update.php';
               <div class="card bg-info text-white shadow" style="margin-bottom: 5%;">
                 <div class="card-body">
                     <div class="text-white-50 small">
-                      <h3><i class="fas fa-user-edit"></i> Legislation Data</h3>
+                      <h3><i class="fas fa-user-edit"></i> Person Data</h3>
                     </div>
                 </div>
               </div>

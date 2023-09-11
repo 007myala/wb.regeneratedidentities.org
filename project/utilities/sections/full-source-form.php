@@ -1,6 +1,6 @@
   <form action="?personID=<?php echo $personID; ?>&objectID=<?php echo $objectID; ?>" method="POST">
   <input type="hidden" name="action" value="Update">
-  <?php if($_GET['doctype']!="NoSelection"):?>
+  <?php if((isset($_GET['doctype']) && $_GET['doctype']!="NoSelection") || $doctype!="NoSelection"):?>
   <div class="col-xl-3 col-md-3 mb-3">
   <button type="submit" class="btn btn-primary">Save <i class="fas fa-save"></i></button>
   </div>
@@ -346,7 +346,7 @@
    ?>
 
     <div class="row">
-      <?php if($_GET['doctype']!="NoSelection"):?>
+      <?php if((isset($_GET['doctype']) && $_GET['doctype']!="NoSelection") || $doctype!="NoSelection"):?>
       <div class="col-xl-3 col-md-3 mb-3">
       <button type="submit" class="btn btn-primary">Save <i class="fas fa-save"></i></button>
       </div>
