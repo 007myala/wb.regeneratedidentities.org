@@ -12,6 +12,13 @@ $TimeDate = $date->format('Y-m-d H:i:s');
  $url=explode("&message", $_SERVER['HTTP_REFERER'])[0];
  $url_error=$url."&message=2";
  $url_success=$url."&message=1";
+
+ //Check for Full Source
+ if(isset($_POST['objectFlag']) && $_POST['objectFlag']=='FS'){
+  $isFullSource = true;
+ } else {
+  $isFullSource = false;
+ }
 //File upload for Image
 
 
@@ -19,7 +26,13 @@ $TimeDate = $date->format('Y-m-d H:i:s');
 
   $ext = pathinfo($val, PATHINFO_EXTENSION);
   $imglink="../../DataFiles/".$objectID.".".$ext;
-  $folder_link="../../DataFiles/".$personUI;
+  if($isFullSource){
+    $objectUI = $_POST['objectUI'];
+    $folder_link="../../DataFiles/".$objectUI;
+  } else {
+    $folder_link="../../DataFiles/".$personUI;
+  }
+  
   if (!file_exists($folder_link)) {
     mkdir($folder_link, 0777, true);
 }

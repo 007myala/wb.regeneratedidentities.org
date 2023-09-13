@@ -53,7 +53,7 @@ require 'utilities/database_SS.php';
           <div class="card bg-warning text-white shadow" style="margin-bottom: 5%;">
             <div class="card-body">
                 <div class="text-white-50 small">
-                  <h3><i class="fas fa-user-plus"></i> Create New Legislation</h3>
+                  <h3><i class="fas fa-user-plus"></i> Create New Person</h3>
 
                 </div>
             </div>
@@ -104,7 +104,7 @@ require 'utilities/database_SS.php';
                           ?>
                         </select>
                       </div>
-                      <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-user-plus"></i> Create New Legislation</button>
+                      <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-user-plus"></i> Create New Person</button>
                     </form>
                   </div>
                 </div>

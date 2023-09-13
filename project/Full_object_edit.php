@@ -97,6 +97,7 @@ require 'utilities/commands/object_update.php';
           $q1="SELECT * FROM `object` WHERE `objectID` LIKE '".$objectID."'";
           $query = $conn->query($q1);
           $object_data = $query->fetch(PDO::FETCH_ASSOC);
+          $objectUI = $object_data['UI'];
 
              ?>
           <div class="row">
@@ -217,8 +218,10 @@ require 'utilities/commands/object_update.php';
 
                       <div class="col-xl-10 col-md-1 mb-1">
                           <form action="utilities/commands_external/upload_object.php" method="POST" class="form-group" enctype="multipart/form-data">
-                            <input type="hidden" name="objectID" value="<?php echo $objectID;?>">
-                            <input type="hidden" name="personUI" value="<?php echo isset($person_data['UI']) ? $person_data['UI'] : '';?>">
+                            <input type="hidden" name="objectID" value="<?php echo $objectID; ?>">
+                            <input type="hidden" name="personUI" value="<?php echo $personID; ?>">
+                            <input type="hidden" name="objectUI" value="<?php echo $objectUI; ?>">
+                            <input type="hidden" name="objectFlag" value="FS">
                          <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
                       </div>
                       <div class="col-xl-2 col-md-2 mb-2">
@@ -237,19 +240,19 @@ require 'utilities/commands/object_update.php';
                       <div class="col-xl-12 col-md-1 mb-1">
                         <h4>
                           <?php 
-                            $pdata_UI = isset($person_data['UI']) ? $person_data['UI'] : '';
-                          $newfilename= $pdata_UI."_".$object_data['Field1'].".".$object_data['Format'];
+                          $newfilename= $object_data['UI']."_".$object_data['Field1'].".".$object_data['Format'];
                           if($object_data['Format']=="PDF" or $object_data['Format']=="pdf"){ ?>
                           <a download="<?php echo $newfilename; ?>" class="btn btn-warning col-xl-12 col-md-1 mb-1" href="<?php echo explode("?", $current_URL)[0].$object_data['File'];?>" onclick="window.open('<?php echo explode("?", $current_URL)[0].$object_data['File'];?>',
                                           'newwindow',
                                     'width=500,height=500');
                               return false;" target="_blank"><i class="far fa-file"></i></i>  View File</a>
-                            <?php } else{ ?>
-                              <a download="<?php echo $newfilename; ?>" class="btn btn-warning col-xl-12 col-md-1 mb-1" href="<?php echo explode("?", $current_URL)[0].$object_data['File'];?>" ><i class="far fa-file"></i></i> Download File</a>
-
+                            <?php } else {
+                              if($object_data['File']!='' && $object_data['Format']!=''){ ?>
+                                <a download="<?php echo $newfilename; ?>" class="btn btn-warning col-xl-12 col-md-1 mb-1" href="<?php echo explode("?", $current_URL)[0].$object_data['File'];?>" ><i class="far fa-file"></i></i> Download File</a>
+                              <?php } ?>                          
                             <?php }?>
                         </h4>
-                        </div>
+                      </div>
                     </div>
                   <?php } ?>
 
