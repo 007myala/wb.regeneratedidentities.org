@@ -39,7 +39,7 @@ $TimeDate = $date->format('Y-m-d H:i:s');
 
                                 Your new password is case-sensitive. Please keep your password confidential.
                                 <br><br>
-                                Project Name: W.E.B Du Bois Anti-Slavery<br>
+                                Project Name: US Anti-Slavery Laws Archive<br>
                                 Project Code: WB<br>
                                 <br>
                                 If you have not made these changes, please contact us immediately at support@regid.ca

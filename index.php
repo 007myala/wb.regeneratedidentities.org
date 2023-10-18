@@ -108,7 +108,7 @@ endif;
           <div class="card-body" >
             <center><img style="width:60%; height:auto; position: center;" src="img/regid_logo.png">
             <hr />
-            <i>W.E.B Du Bois Anti-Slavery</i>
+            <i>US Anti-Slavery Laws Archive</i>
             <hr />
 					<?php
 					if(isset($_GET['redirect'])){

@@ -50,7 +50,7 @@ $TimeDate = $date->format('Y-m-d H:i:s');
                           URL: https://wb.regeneratedidentities.org<br>
                           Your Username :  <b>'.$email.'</b><br>
                           Your Password**: <b>'.$password.'</b><br>
-                          Project Name: <b>W.E.B Du Bois Anti-Slavery</b><br>
+                          Project Name: <b>US Anti-Slavery Laws Archive</b><br>
                           Project Code: <b>WB</b><br>
 
                           <br>

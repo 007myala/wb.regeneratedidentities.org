@@ -317,8 +317,8 @@ require 'utilities/database_SS.php';?>
                        <br>
                      <?php }?>
 
-                     <a href="#" target="_blank"><i>Click here to view Home page of <u>W.E.B Du Bois</u></i></a><br>
-                     <a href="#" target="_blank"><i>Click here to view Development Node of <u>W.E.B Du Bois</u></i></a>
+                     <a href="#" target="_blank"><i>Click here to view Home page of <u>US Anti-Slavery Laws Archive</u></i></a><br>
+                     <a href="#" target="_blank"><i>Click here to view Development Node of <u>US Anti-Slavery Laws Archive</u></i></a>
                  </div>
 
                    </div>

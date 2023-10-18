@@ -12,7 +12,7 @@
   <!-- Divider -->
   <hr class="sidebar-divider my-0">
   <li class="nav-item active">
-    <div class="sidebar-brand-text mx-3 text-white text-center"><i>W.E.B Du Bois</i></div>
+    <div class="sidebar-brand-text mx-3 text-white text-center"><i>US Anti-Slavery Laws Archive</i></div>
   </li>
 
   <!-- Divider -->

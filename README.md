@@ -1,7 +1,7 @@
 # Regenerate Identities
 
 Author: Chadha, Kartikay\
-Project Name: W.E.B Du Bois Anti-Slavery\
+Project Name: US Anti-Slavery Laws Archive\
 Prototype Version Code: LA-P.V.01\
 Release Date: To Be Released\
 Draft Release: Pending\
